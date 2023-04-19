@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUIZ DO LOVE</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>QUIZ DO LOVE</h2>
+  <main>
+    <div class="content">
+      <span class="spnQtd"></span>
+      <span class="question"></span>
+      <div class="answers"></div>
+    </div>
+    <div class="amor" >
+      <form id="form">
+        <span>Você me ama ? </span>
+        <br>
+        <a href="mensagem.html"><input type="button" class="btnAmorSim"  value="SIM"></a>
+        <input type="button" class="btnAmorNao" id="btnAmorNao" onclick="foge()" value="Não">
+      </form>
+      <div class="textin" id="textin">
+     </span>
+      </div>
+    </div>
+    <div class="finish">
+      <span></span>
+      <button>Continuar</button>
+    </div>
+  </main>
+  <script>
+      var textin = document.getElementById("textin"); 
+      textin.style.display="none";
+      form.style.display="none";
+
+    function foge(){
+      n = Math.floor(Math.random() * (200) + -200)
+      n2 = Math.floor(Math.random() * (200) + -200)
+      var nao = document.getElementById("btnAmorNao"); 
+      nao.style.position = "absolute";
+      nao.style.margin = n+"px "+n2+"px";
+    }
+    function textao(){
+      var textin = document.getElementById("textin"); 
+      form.style.display="none";
+      textin.style.display="flex";
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js" type="module"></script>
+</body>
+</html>
